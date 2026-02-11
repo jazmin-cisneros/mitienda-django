@@ -1,0 +1,95 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% trans "My shop" %}{% endblock %}
+    </title>
+    <!-- Solo carga base.css -->
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <a href="/" class="logo">{% trans "My shop" %}</a>
+        
+        <!-- Selector de idiomas mejor integrado -->
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        <div class="language-selector">
+            <p>{% trans "Language" %}:</p>
+            <ul class="languages">
+                {% for language in languages %}
+                <li>
+                    <a href="/{{ language.code }}/"
+                       {% if language.code == LANGUAGE_CODE %}class="selected"{% endif %}>
+                        {{ language.name_local|title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div id="subheader">
+        <div class="cart">
+            {% with total_items=cart|length %}
+                {% if total_items > 0 %}
+                    {% trans "Your cart" %}:
+                    <a href="{% url 'cart:cart_detail' %}">
+                        {% blocktrans with total_items_plural=total_items|pluralize total_price=cart.get_total_price %}
+                            {{ total_items }} item{{ total_items_plural }}, ${{ total_price }}
+                        {% endblocktrans %}
+                    </a>
+                {% else %}
+                    {% trans "Your cart is empty." %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <div id="content">
+        <!-- Sistema de mensajes de Django -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+        {% block content %}
+            <!-- Contenido principal -->
+        {% endblock %}
+    </div>
+
+    <!-- Footer optimizado -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{% trans "About Us" %}</h3>
+                <p>{% trans "We offer the best products with excellent quality and service." %}</p>
+            </div>
+            <div class="footer-section">
+                <h3>{% trans "Quick Links" %}</h3>
+                <ul>
+                    <li><a href="/">{% trans "Home" %}</a></li>
+                    <li><a href="#">{% trans "Products" %}</a></li>
+                    <li><a href="#">{% trans "Contact" %}</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>{% trans "Contact" %}</h3>
+                <p>email@example.com</p>
+                <p>+123 456 7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {% now "Y" %} {% trans "My Shop" %}. {% trans "All rights reserved." %}</p>
+        </div>
+    </footer>
+</body>
+</html>

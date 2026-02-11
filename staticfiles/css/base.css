@@ -1,0 +1,513 @@
+/* Reset básico */
+body, ul, li, a, p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit; /* Hereda el color de tu esquema rosa */
+}
+
+a {
+    color: #d14d7a; /* Rosa oscuro para enlaces */
+}
+
+a:hover {
+    color: #e6739f; /* Rosa medio al pasar el mouse */
+}
+
+/* Estilos generales - Tema de té relajante en tonos rosas */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5; /* Fondo rosa muy claro */
+    color: #4a2c40; /* Texto morado oscuro para contraste */
+    line-height: 1.6;
+}
+
+/* Cabecera - Estilo elegante */
+#header {
+    background-color: #d14d7a; /* Rosa oscuro */
+    color: white;
+    padding: 25px 0;
+    border-bottom: 4px solid #e6739f; /* Rosa más claro */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#header a.logo {
+    color: #fff9fb; /* Blanco rosado */
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 30px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+
+/* Subcabecera del carrito - Más destacada */
+#subheader {
+    background-color: #e6739f; /* Rosa medio */
+    color: #fff9fb; /* Blanco rosado */
+    padding: 12px 30px;
+    height: 50px;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#subheader .cart {
+    float: right;
+    color: #fff9fb;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: #d14d7a; /* Rosa oscuro */
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#subheader .cart:hover {
+    background-color: #b43764;
+    transform: translateY(-2px);
+}
+
+/* Contenido principal */
+#content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para productos - Tarjetas elegantes */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-list .item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f8d6e5;
+}
+
+.product-list .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.product-list .item img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-list .item h3 {
+    color: #d14d7a;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-list .item .price {
+    color: #c9376e; /* Rosa intenso */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product-list .item .description {
+    color: #6d4a60;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Estilos para el carrito - Más profesional */
+table.cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+table.cart th {
+    text-align: left;
+    padding: 15px;
+    background: #d14d7a;
+    color: white;
+    font-weight: 500;
+}
+
+table.cart td {
+    padding: 15px;
+    border-bottom: 1px solid #f8d6e5;
+    vertical-align: middle;
+}
+
+table.cart .num {
+    text-align: right;
+}
+
+table.cart .total {
+    font-weight: bold;
+    color: #c9376e;
+    font-size: 18px;
+}
+
+/* Botones - Más atractivos */
+.button {
+    background: #c9376e; /* Rosa intenso */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background: #b32b5e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.button.light {
+    background: #e6739f;
+}
+
+.button.light:hover {
+    background: #d14d7a;
+}
+
+/* Formularios - Más elegantes */
+.order-form {
+    margin-top: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form textarea,
+.order-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #f8d6e5;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.order-form input[type="text"]:focus,
+.order-form input[type="email"]:focus,
+.order-form textarea:focus,
+.order-form select:focus {
+    border-color: #e6739f;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 115, 159, 0.2);
+}
+
+.order-form input[type="submit"] {
+    background: #c9376e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.order-form input[type="submit"]:hover {
+    background: #b32b5e;
+    transform: translateY(-2px);
+}
+
+/* Barra lateral de categorías - Más integrada */
+#sidebar {
+    float: left;
+    width: 250px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+#sidebar h3 {
+    color: #d14d7a;
+    border-bottom: 2px solid #f8d6e5;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #f8d6e5;
+}
+
+#sidebar li.selected {
+    font-weight: bold;
+    color: #c9376e;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #d14d7a;
+    transition: color 0.2s ease;
+}
+
+#sidebar a:hover {
+    color: #c9376e;
+}
+
+/* Detalle de producto - Más destacado */
+.product-detail {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.product-detail img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-detail .product-info {
+    flex: 1;
+}
+
+.product-detail h1 {
+    margin-top: 0;
+    color: #d14d7a;
+    font-size: 32px;
+}
+
+.product-detail .price {
+    font-size: 32px;
+    color: #c9376e;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.product-detail .description {
+    color: #6d4a60;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Responsive Design (se mantiene igual) */
+@media (max-width: 992px) {
+    #sidebar {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    
+    .product-detail {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .product-detail img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #header a.logo {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+    
+    #content {
+        padding: 15px;
+    }
+    
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .product-detail {
+        padding: 25px;
+    }
+}
+
+/* Animaciones y efectos especiales */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.product-list .item {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Estilos para imágenes en el carrito */
+table.cart img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #f8d6e5;
+}
+
+/* Mensajes de estado */
+.notice {
+    background: #f8d6e5;
+    color: #9e2b55;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 5px solid #d14d7a;
+}
+
+.error {
+    background: #fad6e0;
+    color: #9e2b55;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 5px solid #d14d7a;
+}
+
+/* Selector de idioma */
+.language-selector {
+    background-color: #b43764; /* Rosa más oscuro */
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.language-selector a {
+    color: #fff9fb !important; /* Fuerza texto blanco */
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.language-selector .selected {
+    border-bottom: 2px solid #fff9fb;
+}
+
+/* Estilos para las recomendaciones */
+.recommendations {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f8d6e5;
+}
+
+.recommended-items {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.recommendations .item {
+    text-align: center;
+    width: 120px;
+}
+
+.recommendations .item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #f8d6e5;
+    border-radius: 4px;
+}
+
+.recommendations .item p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #4a2c40;
+}
+
+/* Estilos específicos para recomendaciones en carrito */
+.recommendations.cart {
+    margin: 30px 0;
+    padding: 20px;
+    background: #fff9fb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recommendations.cart h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #4a2c40;
+}
+
+/* --- Estilos específicos para el selector de idiomas --- */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e6739f; /* Rosa medio */
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector p {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.language-selector ul.languages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.language-selector ul.languages li {
+    margin: 0;
+}
+
+.language-selector ul.languages a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.language-selector ul.languages a:hover {
+    background-color: #d14d7a; /* Rosa oscuro al pasar el mouse */
+}
+
+.language-selector ul.languages a.selected {
+    background-color: #d14d7a; /* Rosa oscuro para el idioma seleccionado */
+    font-weight: bold;
+}

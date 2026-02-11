@@ -1,0 +1,64 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MyShop 1.0\n"
+"Report-Msgid-Bugs-To: dev@tutienda.com\n"
+"POT-Creation-Date: 2025-05-25 16:00+0000\n"
+"PO-Revision-Date: 2025-05-26 18:18+0000\n"
+"Last-Translator:   <1820153@itace.edu.mx>\n"
+"Language-Team: Español <equipo@tutienda.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Translated-Using: django-rosetta 0.10.2\n"
+
+#: myshop/settings.py:117
+msgid "English"
+msgstr "Inglés"
+
+#: myshop/settings.py:118
+msgid "Spanish"
+msgstr "Español"
+
+#: cart/templates/cart/detail.html:12
+msgid "Your shopping cart"
+msgstr "Tu carrito de compras"
+
+#: cart/templates/cart/detail.html:15
+msgid "Product"
+msgstr "Producto"
+
+#: cart/templates/cart/detail.html:16
+msgid "Quantity"
+msgstr "Cantidad"
+
+#: cart/templates/cart/detail.html:17
+msgid "Remove"
+msgstr "Eliminar"
+
+#: cart/templates/cart/detail.html:18
+msgid "Unit price"
+msgstr "Precio unitario"
+
+#: cart/templates/cart/detail.html:19
+msgid "Price"
+msgstr "Precio"
+
+#: coupons/templates/coupons/apply.html:5
+msgid "Apply coupon"
+msgstr "Aplicar cupón"
+
+#: shop/templates/shop/base.html:25
+msgid "My Shop"
+msgstr "Mi Tienda"
+
+#: shop/templates/shop/product/list.html:15
+msgid "Categories"
+msgstr "Categorías"
+
+#: shop/templates/shop/product/detail.html:25
+msgid "Add to cart"
+msgstr "Añadir al carrito"

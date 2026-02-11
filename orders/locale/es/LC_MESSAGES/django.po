@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MyShop Orders 1.0\n"
+"Report-Msgid-Bugs-To: orders-dev@tutienda.com\n"
+"POT-Creation-Date: 2025-05-25 16:05+0000\n"
+"PO-Revision-Date: 2025-05-25 16:05+0000\n"
+"Last-Translator: Tu Nombre <tu@email.com>\n"
+"Language-Team: Español <orders-es@tutienda.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: orders/models.py:10
+msgid "first name"
+msgstr "nombre"
+
+#: orders/models.py:11
+msgid "last name"
+msgstr "apellidos"
+
+#: orders/models.py:12
+msgid "e-mail"
+msgstr "correo electrónico"
+
+#: orders/models.py:13
+msgid "address"
+msgstr "dirección"
+
+#: orders/models.py:14
+msgid "postal code"
+msgstr "código postal"
+
+#: orders/models.py:15
+msgid "city"
+msgstr "ciudad"
+
+#: orders/templates/orders/order/create.html:5
+#: orders/templates/orders/order/create.html:9
+msgid "Checkout"
+msgstr "Pagar"
+
+#: orders/templates/orders/order/create.html:11
+msgid "Your order"
+msgstr "Tu pedido"
+
+#: orders/templates/orders/order/create.html:21
+#, python-format
+msgid ""
+"\n"
+"                        \"%(code)s\" (%(discount)s%% off)\n"
+"                    "
+msgstr ""
+"\n"
+"                        \"%(code)s\" (%(discount)s%% de descuento)\n"
+"                    "
+
+#: orders/templates/orders/order/create.html:28
+msgid "Total"
+msgstr "Total"
+
+#: orders/templates/orders/order/create.html:33
+msgid "Place order"
+msgstr "Realizar pedido"
+
+#: orders/templates/orders/order/created.html:5
+msgid "Thank you"
+msgstr "Gracias"
+
+#: orders/templates/orders/order/created.html:8
+#, python-format
+msgid "Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>."
+msgstr "Tu pedido se ha completado con éxito. Tu número de pedido es <strong>%(order_id)s</strong>."

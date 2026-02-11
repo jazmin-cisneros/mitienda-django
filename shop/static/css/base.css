@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Cabecera */
+#header {
+    background-color: #35424a;
+    color: white;
+    padding: 20px 0;
+    border-bottom: #e8491d 3px solid;
+}
+
+#header a.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/* Subcabecera (carrito) */
+#subheader {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 20px;
+    height: 40px;
+}
+
+#subheader .cart {
+    float: right;
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+#content {
+    padding: 20px;
+}
+
+/* Estilos para productos */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-list .item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-list .item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el carrito */
+table.cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.cart th {
+    text-align: left;
+    padding: 10px;
+    background: #35424a;
+    color: white;
+}
+
+table.cart td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table.cart .num {
+    text-align: right;
+}
+
+table.cart .total {
+    font-weight: bold;
+}
+
+/* Botones */
+.button {
+    background: #e8491d;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.button.light {
+    background: #35424a;
+}
+
+/* Formularios */
+.order-form {
+    margin-top: 20px;
+}
+
+.order-form input[type="text"],
+.order-form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.order-form input[type="submit"] {
+    background: #e8491d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Barra lateral de categorías */
+#sidebar {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar li {
+    padding: 5px 0;
+}
+
+#sidebar li.selected {
+    font-weight: bold;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #35424a;
+}
+
+/* Detalle de producto */
+.product-detail {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-detail h1 {
+    margin-top: 0;
+}
+
+.product-detail .price {
+    font-size: 24px;
+    color: #e8491d;
+    font-weight: bold;
+    margin: 20px 0;
+}
