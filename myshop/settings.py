@@ -25,9 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u9j#219*@rss2)l(#$a0#qp2-9-ya6ylcsv19@bkyv-ytae7)('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+
 
 
 # Application definition
@@ -181,21 +183,22 @@ else:
 
 
 
-# Configuración Braintree
-BRAINTREE_MERCHANT_ID = 'xgzj9gg92tkkv2d4'  # Reemplazar con tu Merchant ID
-BRAINTREE_PUBLIC_KEY = 'qzfr98py32d2z5vx'   # Reemplazar con tu Public Key
-BRAINTREE_PRIVATE_KEY = 'c60456c9747c818783d874ea146a2b7b'  # Reemplazar con tu Private Key
+BRAINTREE_MERCHANT_ID = os.environ.get("BRAINTREE_MERCHANT_ID", "")
+BRAINTREE_PUBLIC_KEY = os.environ.get("BRAINTREE_PUBLIC_KEY", "")
+BRAINTREE_PRIVATE_KEY = os.environ.get("BRAINTREE_PRIVATE_KEY", "")
+
 
 
 from braintree import Configuration, Environment
 
-Configuration.configure(
-    Environment.Sandbox,
-    BRAINTREE_MERCHANT_ID,
-    BRAINTREE_PUBLIC_KEY,
-    BRAINTREE_PRIVATE_KEY,
-    
-)
+if BRAINTREE_MERCHANT_ID and BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY:
+    Configuration.configure(
+        Environment.Sandbox,
+        BRAINTREE_MERCHANT_ID,
+        BRAINTREE_PUBLIC_KEY,
+        BRAINTREE_PRIVATE_KEY,
+    )
+
 
 PARLER_LANGUAGES = {
     None: (
@@ -211,13 +214,12 @@ PARLER_LANGUAGES = {
 PARLER_DEFAULT_LANGUAGE_CODE = 'en'
 PARLER_SHOW_EXCLUDED_LANGUAGE_TABS = True
 
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
-REDIS_DB = 1
+REDIS_URL = os.environ.get("REDIS_URL", "")
 
-# Configuración Celery
-CELERY_BROKER_URL = 'redis://localhost:6379/0'  # O tu URL de RabbitMQ
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+if REDIS_URL:
+    CELERY_BROKER_URL = REDIS_URL
+    CELERY_RESULT_BACKEND = REDIS_URL
+
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
